@@ -1,6 +1,6 @@
 :root {
     --primary-color: #29335c;
-    --light-primary: #9ac4f8;
+    --light-primary: #3f4f8d;
     --ligthest-color: #e9ebd5;
     --secondary-color: #774936;
     --light-secondary: #c08972;   
@@ -13,23 +13,86 @@
     font-family: sans-serif;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
     background-color: var(--primary-color);
     color: var(--ligthest-color)
 }
 
 #menu-pesquisa {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+    align-items: center;
+    width: 50%;
+    justify-content: flex-end;
 }
 
 header > h2 > i {
     margin-right: 0.5rem;
 }
 
+.display {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.nome-wrapper {
+    width: 65%;
+    align-items: center;
+}
+
+.ano-wrapper {
+    align-items: center;
+}
+
+.nome-wrapper > input {
+    width: 100%;
+    min-width: 5rem;
+}
+
+.ano-wrapper > input {
+    max-width: 5rem;
+}
+
+.ajuste-input {
+    margin: 0 0.5rem ;
+    border-radius: 20px;
+    padding: 0.3rem 0.2rem;
+    padding-left: 1rem;
+    font-weight: bold;
+}
+
+.ajuste-label {
+    font-weight: bold;
+}
+
+.botao-pesquisa {
+    all: unset;
+    /* width: 5%; */
+    padding: 0.5rem;
+    border: 1px solid var(--ligthest-color);
+    border-radius: 20px;
+}
+
+.botao-pesquisa:focus, .botao-pesquisa:hover {
+    background-color: var(--light-primary);
+}
+
+/* Ajustando a tag Main */
+
+main {
+    text-align: center;
+    color: var(--primary-color);
+    background-color: var(--ligthest-color);
+    padding: 2rem 0;
+    flex-grow: 1;
+}
 
